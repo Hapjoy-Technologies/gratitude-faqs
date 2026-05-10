@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Gratitude App</title>
+    <meta name="description" content="Frequently asked questions about the Gratitude journaling app — Pro, Data, Journal, Affirmations, Vision Board, and Daily Zen." />
+    <meta name="robots" content="all" />
+    <meta http-equiv="content-language" content="en-us" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Gratitude | FAQs" />
+    <meta property="og:title" content="Gratitude | FAQs" />
+    <meta property="og:description" content="Frequently asked questions about the Gratitude journaling app." />
+    <meta property="og:url" content="https://gratefulness.me/faqs" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Gratitude | FAQs" />
+    <meta name="twitter:description" content="Frequently asked questions about the Gratitude journaling app." />
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/faqs.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <img class="page-shape page-shape--left" src="images/shape-left.svg" alt="" aria-hidden="true">
+        <img class="page-shape page-shape--right" src="images/shape-right.svg" alt="" aria-hidden="true">
+
+        <header class="site-header">
+            <div class="container">
+                <a href="https://gratefulness.me/" class="site-header__logo" aria-label="Gratitude home">
+                    <img src="images/favicon.png" alt="Gratitude logo">
+                    <span>Gratitude</span>
+                </a>
+                <a href="https://gratefulness.me/" class="site-header__link">Back to gratefulness.me</a>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero__title">Hey! How can we help you today?</h1>
+                <form class="hero__search" role="search" onsubmit="return false;">
+                    <svg class="hero__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                        <path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input id="search-input" type="search" placeholder="Search" autocomplete="off" aria-label="Search FAQs">
+                </form>
+            </div>
+        </section>
+
+        <main class="content">
+            <div class="container">
+                <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb" hidden></nav>
+
+                <section id="view-categories" class="view view--categories" hidden>
+                    <h2 class="view__title">Categories</h2>
+                    <div id="categories-grid" class="categories-grid"></div>
+                </section>
+
+                <section id="view-category" class="view view--category" hidden>
+                    <header class="category-header">
+                        <span id="category-icon" class="category-header__icon" aria-hidden="true"></span>
+                        <div>
+                            <h2 id="category-title" class="category-header__title"></h2>
+                            <p id="category-subtitle" class="category-header__subtitle"></p>
+                        </div>
+                    </header>
+                    <ul id="question-list" class="question-list"></ul>
+                </section>
+
+                <article id="view-article" class="view view--article" hidden>
+                    <h2 id="article-title" class="article__title"></h2>
+                    <div id="article-body" class="article__body"></div>
+                </article>
+
+                <section id="view-search" class="view view--search" hidden>
+                    <h2 id="search-title" class="view__title"></h2>
+                    <div id="search-results"></div>
+                </section>
+
+                <div id="view-loading" class="view view--loading">Loading…</div>
+                <div id="view-error" class="view view--error" hidden>
+                    Sorry, we couldn't load the FAQs. Please refresh the page.
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer__brand">
+                    <svg width="20" height="18" viewBox="0 0 37 33" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M32.6799 1.20943C30.0951 -0.210969 26.9454 -0.390646 24.1968 0.725504C21.3493 1.84053 19.0903 4.09957 17.7591 7.08561C17.4143 5.66951 16.6634 4.3692 15.5879 3.32574C13.9269 1.69335 11.6157 0.763415 9.39944 0.828086C6.34791 0.921749 3.85163 2.07692 2.17637 4.17316C-0.0802451 6.99641 -0.60228 11.2045 0.705181 16.0237C2.81705 23.7954 10.752 28.6101 17.4269 31.9329C17.6037 32.0212 17.801 32.0671 18.0012 32.0667C18.2362 32.0662 18.4669 32.0077 18.6703 31.8972C22.773 29.7385 26.9754 27.3323 29.932 24.3618C34.2293 20.0467 36.7327 15.0491 36.9819 10.2902C37.1931 6.2761 35.5439 2.79722 32.6799 1.20943Z" fill="#FE678B"/>
+                    </svg>
+                    <span>Still need help? Email us at <a href="mailto:team@gratefulness.me">team@gratefulness.me</a></span>
+                </div>
+                <nav class="site-footer__nav" aria-label="Legal">
+                    <a href="https://www.gratefulness.me/terms-and-conditions.html">Terms</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="https://www.gratefulness.me/privacy-policy.html">Privacy</a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <script src="data/faqs.js"></script>
+    <script src="js/faqs.js"></script>
+</body>
+
+</html>
