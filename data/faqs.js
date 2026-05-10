@@ -128,46 +128,14 @@ window.FAQ_DATA = {
       "subtitle": "Changing dates, Adding photos, Prompts",
       "icon": "book",
       "questions": [
-        {
-          "slug": "journal-question-1",
-          "title": "TODO: question 1",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "journal-question-2",
-          "title": "TODO: question 2",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "journal-question-3",
-          "title": "TODO: question 3",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "journal-question-4",
-          "title": "TODO: question 4",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "journal-question-5",
-          "title": "TODO: question 5",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "journal-question-6",
-          "title": "TODO: question 6",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "journal-question-7",
-          "title": "TODO: question 7",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "journal-question-8",
-          "title": "TODO: question 8",
-          "answer": "<p>TODO: fill in answer.</p>"
-        }
+        { "slug": "how-many-journal-entries",  "title": "How many journal entries",  "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "searching-entries",         "title": "Searching entries",         "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "print-journal",             "title": "Print journal",             "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "writing-for-past-dates",    "title": "Writing for past dates",    "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "adding-custom-prompt",      "title": "Adding custom prompt",      "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "turn-off-prompts",          "title": "Turn off prompts",          "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "writing-with-apple-pencil", "title": "Writing with Apple Pencil", "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "add-more-than-one-photo",   "title": "Add more than one photo",   "answer": "<p>TODO: fill in answer.</p>" }
       ]
     },
     {
@@ -176,61 +144,17 @@ window.FAQ_DATA = {
       "subtitle": "Writing and editing affirmations",
       "icon": "heart",
       "questions": [
-        {
-          "slug": "affirmations-question-1",
-          "title": "TODO: question 1",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "affirmations-question-2",
-          "title": "TODO: question 2",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "affirmations-question-3",
-          "title": "TODO: question 3",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "affirmations-question-4",
-          "title": "TODO: question 4",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "affirmations-question-5",
-          "title": "TODO: question 5",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "affirmations-question-6",
-          "title": "TODO: question 6",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "affirmations-question-7",
-          "title": "TODO: question 7",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "affirmations-question-8",
-          "title": "TODO: question 8",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "affirmations-question-9",
-          "title": "TODO: question 9",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "affirmations-question-10",
-          "title": "TODO: question 10",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "affirmations-question-11",
-          "title": "TODO: question 11",
-          "answer": "<p>TODO: fill in answer.</p>"
-        }
+        { "slug": "loop-affirmations",            "title": "Loop affirmations",            "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "adding-affirmation",           "title": "Adding affirmation",           "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "editing-affirmation",          "title": "Editing affirmation",          "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "add-your-voice",               "title": "Add your voice",               "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "deleting-affirmation",         "title": "Deleting affirmation",         "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "control-affirmation-speed",    "title": "Control affirmation speed",    "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "affirmation-widget-time",      "title": "Affirmation widget time",      "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "re-ordering-affirmations",     "title": "Re-ordering affirmations",     "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "multiple-affirmation-reminders","title": "Multiple affirmation reminders","answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "how-many-affirmation-folders", "title": "How many affirmation folders", "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "delete-image-from-affirmation","title": "Delete image from affirmation","answer": "<p>TODO: fill in answer.</p>" }
       ]
     },
     {
@@ -239,36 +163,12 @@ window.FAQ_DATA = {
       "subtitle": "Creating and editing vision boards",
       "icon": "grid",
       "questions": [
-        {
-          "slug": "vision-board-question-1",
-          "title": "TODO: question 1",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "vision-board-question-2",
-          "title": "TODO: question 2",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "vision-board-question-3",
-          "title": "TODO: question 3",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "vision-board-question-4",
-          "title": "TODO: question 4",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "vision-board-question-5",
-          "title": "TODO: question 5",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "vision-board-question-6",
-          "title": "TODO: question 6",
-          "answer": "<p>TODO: fill in answer.</p>"
-        }
+        { "slug": "adjust-vision-board-time",  "title": "Adjust vision board time",  "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "add-music-to-vision-board", "title": "Add music to vision board", "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "photos-in-vision-board",    "title": "Photos in vision board",    "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "add-new-section",           "title": "Add new section",           "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "edit-vision-board-name",    "title": "Edit vision board name",    "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "delete-photo-in-vision-board","title": "Delete photo in vision board","answer": "<p>TODO: fill in answer.</p>" }
       ]
     },
     {
@@ -277,21 +177,9 @@ window.FAQ_DATA = {
       "subtitle": "Copy, view previous days",
       "icon": "sun",
       "questions": [
-        {
-          "slug": "daily-zen-question-1",
-          "title": "TODO: question 1",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "daily-zen-question-2",
-          "title": "TODO: question 2",
-          "answer": "<p>TODO: fill in answer.</p>"
-        },
-        {
-          "slug": "daily-zen-question-3",
-          "title": "TODO: question 3",
-          "answer": "<p>TODO: fill in answer.</p>"
-        }
+        { "slug": "previous-days-daily-zen", "title": "Previous day's Daily Zen", "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "change-quote-time",       "title": "Change quote time",       "answer": "<p>TODO: fill in answer.</p>" },
+        { "slug": "copy-daily-zen",          "title": "Copy Daily Zen",          "answer": "<p>TODO: fill in answer.</p>" }
       ]
     }
   ]
