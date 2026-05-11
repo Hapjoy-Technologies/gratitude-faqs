@@ -2,6 +2,8 @@ body {
     background: var(--bg-soft);
 }
 
+[hidden] { display: none !important; }
+
 /* ===== Login screen ===== */
 .login {
     min-height: 100vh;

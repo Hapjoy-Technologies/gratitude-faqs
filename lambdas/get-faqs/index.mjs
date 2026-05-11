@@ -1,14 +1,12 @@
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3';
 
+// CORS is configured on the Lambda Function URL (AWS Console).
+// Do NOT add Access-Control-* headers here, or the browser will see
+// duplicate values and reject the response.
+
 const s3 = new S3Client({});
 const BUCKET = process.env.BUCKET_NAME;
 const KEY = process.env.OBJECT_KEY || 'faqs.json';
-
-const corsHeaders = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type'
-};
 
 const streamToString = async (stream) => {
     const chunks = [];
@@ -19,14 +17,10 @@ const streamToString = async (stream) => {
 export const handler = async (event) => {
     const method = event?.requestContext?.http?.method || event?.httpMethod || 'GET';
 
-    if (method === 'OPTIONS') {
-        return { statusCode: 204, headers: corsHeaders };
-    }
-
     if (method !== 'GET') {
         return {
             statusCode: 405,
-            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ error: 'Method not allowed' })
         };
     }
@@ -37,7 +31,6 @@ export const handler = async (event) => {
         return {
             statusCode: 200,
             headers: {
-                ...corsHeaders,
                 'Content-Type': 'application/json',
                 'Cache-Control': 'public, max-age=60'
             },
@@ -47,7 +40,7 @@ export const handler = async (event) => {
         console.error('Failed to fetch FAQ JSON:', err);
         return {
             statusCode: 500,
-            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ error: 'Failed to load FAQs' })
         };
     }

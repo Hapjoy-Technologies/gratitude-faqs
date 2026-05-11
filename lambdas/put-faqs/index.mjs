@@ -2,21 +2,19 @@ import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 import { timingSafeEqual, randomBytes } from 'node:crypto';
 import { extname } from 'node:path';
 
+// CORS is configured on the Lambda Function URL (AWS Console).
+// Do NOT add Access-Control-* headers here, or the browser will see
+// duplicate values and reject the response.
+
 const s3 = new S3Client({});
 const BUCKET = process.env.BUCKET_NAME;
 const CONTENT_KEY = process.env.OBJECT_KEY || 'faqs.json';
 const PASSWORD = process.env.EDITOR_PASSWORD || '';
 const PUBLIC_BASE_URL = process.env.PUBLIC_BASE_URL || ''; // e.g. https://my-bucket.s3.amazonaws.com
 
-const corsHeaders = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type, x-editor-password'
-};
-
 const json = (statusCode, body) => ({
     statusCode,
-    headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
 });
 
@@ -65,7 +63,6 @@ const isValidFaqShape = (data) => {
 
 export const handler = async (event) => {
     const method = event?.requestContext?.http?.method || event?.httpMethod || 'POST';
-    if (method === 'OPTIONS') return { statusCode: 204, headers: corsHeaders };
     if (method !== 'POST') return json(405, { error: 'Method not allowed' });
 
     const headers = event.headers || {};
