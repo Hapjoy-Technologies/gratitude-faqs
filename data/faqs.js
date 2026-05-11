@@ -78,7 +78,7 @@ window.FAQ_DATA = {
         {
           "slug": "check-icloud-backup",
           "title": "Check iCloud backup",
-          "answer": "<p>Similar to Google Drive, you can't see each file uploaded onto your iCloud but you can check the file size and confirm that it is getting stored.</p><p>Here are the steps to do it (illustrated with photos below):</p><ol><li>Go to Settings</li><li>Tap on iCloud</li><li>Select Manage Account Storage</li><li>You will see the Gratitude app here.</li></ol><p>To keep your backup safe, please don't turn the backup off or delete data.</p>"
+          "answer": "<p>Similar to Google Drive, you can't see each file uploaded onto your iCloud but you can check the file size and confirm that it is getting stored.</p><p>Here are the steps to do it:</p><ol><li>Go to Settings</li><li>Tap on iCloud</li><li>Select Manage Account Storage</li><li>You will see the Gratitude app here.</li></ol><p>To keep your backup safe, please don't turn the backup off or delete data.</p>"
         },
         {
           "slug": "change-google-drive-account",
@@ -88,7 +88,7 @@ window.FAQ_DATA = {
         {
           "slug": "exporting-data",
           "title": "Exporting data",
-          "answer": "<p>You can export your journal entries as a PDF or a restorable zip file at any time:</p><ol><li>Go to Settings &rarr; Import & Export Data</li><li>Choose <strong>Export as .ZIP</strong> for a restorable backup file, or <strong>Export as PDF</strong> for a beautifully formatted journal</li><li>Pick the date range you want to export</li><li>Save the file to your device or share it directly to Gmail, WhatsApp, Notes, or any other app</li></ol></p>"
+          "answer": "<p>You can export your journal entries as a PDF or a restorable zip file at any time:</p><ol><li>Go to Settings &rarr; Import & Export Data</li><li>Choose <strong>Export as .ZIP</strong> for a restorable backup file, or <strong>Export as PDF</strong> for a beautifully formatted journal</li><li>Pick the date range you want to export</li><li>Save the file to your device or share it directly to Gmail, WhatsApp, Notes, or any other app</li></ol>"
         },
         {
           "slug": "importing-data",
@@ -227,7 +227,7 @@ window.FAQ_DATA = {
         {
           "slug": "adjust-vision-board-time",
           "title": "Adjust vision board time",
-          "answer": "<p>When you play your vision board as a slideshow, you can adjust the pause duration between photos:</p><ol><li>Open your vision board and tap <strong>Play</strong></li><li>Tap on the screen to show the controls</li><li>Tap the <strong>Pauses</strong> button to cycle through the available pause durations</li></ol>"
+          "answer": "<p>When you play your vision board as a slideshow, you can adjust the pause duration between photos:</p><ol><li>Open your vision board and tap <strong>Play</strong></li><li>Tap on the screen to show the controls</li><li>Tap the <strong>Pauses</strong> button to cycle through the available pause durations: 1s, 3s, 6s, 9s, 12s, or 15s</li></ol>"
         },
         {
           "slug": "add-music-to-vision-board",
