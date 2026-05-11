@@ -303,7 +303,10 @@
         $('q-slug').value = q.slug || '';
 
         suppressQuillChange = true;
-        quill.root.innerHTML = q.answer || '';
+        // Use Quill's clipboard parser so list items get the data-list attribute
+        // Quill needs to render its numbered/bulleted markers.
+        const delta = quill.clipboard.convert({ html: q.answer || '<p></p>' });
+        quill.setContents(delta, 'silent');
         suppressQuillChange = false;
     }
 
@@ -349,6 +352,15 @@
     }
 
     /* ---------- Quill ---------- */
+    function serializeQuill() {
+        // getSemanticHTML returns clean <ol>/<ul>/<li> the public site can render
+        // with native list markers. Falls back to root.innerHTML on older Quill builds.
+        if (typeof quill.getSemanticHTML === 'function') {
+            return quill.getSemanticHTML();
+        }
+        return quill.root.innerHTML;
+    }
+
     function initQuill() {
         if (quill) return;
         quill = new Quill('#quill-editor', {
@@ -369,8 +381,7 @@
         quill.on('text-change', () => {
             if (suppressQuillChange) return;
             if (selectedCategoryIdx < 0 || selectedQuestionIdx < 0) return;
-            const html = quill.root.innerHTML;
-            data.categories[selectedCategoryIdx].questions[selectedQuestionIdx].answer = html;
+            data.categories[selectedCategoryIdx].questions[selectedQuestionIdx].answer = serializeQuill();
             refreshStatus();
         });
     }
@@ -403,7 +414,7 @@
                     if (img && altText) img.setAttribute('alt', altText);
                     // Trigger change so dirty state updates
                     if (selectedCategoryIdx >= 0 && selectedQuestionIdx >= 0) {
-                        data.categories[selectedCategoryIdx].questions[selectedQuestionIdx].answer = quill.root.innerHTML;
+                        data.categories[selectedCategoryIdx].questions[selectedQuestionIdx].answer = serializeQuill();
                         refreshStatus();
                     }
                 }, 0);
