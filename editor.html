@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Editor - Gratitude</title>
+    <meta name="robots" content="noindex,nofollow" />
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css">
+    <link rel="stylesheet" href="css/faqs.css">
+    <link rel="stylesheet" href="css/editor.css">
+</head>
+
+<body>
+    <div id="login" class="login">
+        <form id="login-form" class="login__card" autocomplete="off">
+            <img src="images/favicon.png" alt="" class="login__logo">
+            <h1 class="login__title">FAQ Editor</h1>
+            <p class="login__subtitle">Enter the team password to continue.</p>
+            <input id="login-password" type="password" placeholder="Password" autocomplete="current-password" required>
+            <button type="submit" class="btn btn--primary">Unlock</button>
+            <div id="login-error" class="login__error" hidden></div>
+        </form>
+    </div>
+
+    <div id="app" class="editor" hidden>
+        <header class="editor__header">
+            <div class="editor__header-left">
+                <img src="images/favicon.png" alt="" class="editor__logo">
+                <strong>FAQ Editor</strong>
+            </div>
+            <div class="editor__header-right">
+                <span id="save-status" class="editor__status"></span>
+                <button id="preview-btn" class="btn btn--ghost" type="button" title="Open public FAQ site in a new tab">Preview site</button>
+                <button id="save-btn" class="btn btn--primary" type="button">Save changes</button>
+                <button id="logout-btn" class="btn btn--ghost" type="button">Log out</button>
+            </div>
+        </header>
+
+        <div class="editor__body">
+            <aside class="editor__sidebar">
+                <div class="editor__sidebar-header">
+                    <h2>Categories</h2>
+                    <button id="add-category-btn" class="btn btn--small" type="button">+ Add</button>
+                </div>
+                <ul id="category-list" class="cat-list"></ul>
+            </aside>
+
+            <main id="editor-main" class="editor__main">
+                <div id="empty-state" class="empty-state">
+                    <p>Select a category on the left, or add a new one.</p>
+                </div>
+
+                <section id="category-pane" class="pane" hidden>
+                    <div class="pane__section">
+                        <h3 class="pane__title">Category details</h3>
+                        <div class="form-grid">
+                            <label>
+                                <span>Title</span>
+                                <input id="cat-title" type="text" placeholder="e.g. Gratitude Pro">
+                            </label>
+                            <label>
+                                <span>Slug <small>(URL part, lowercase, hyphens)</small></span>
+                                <input id="cat-slug" type="text" placeholder="e.g. gratitude-pro">
+                            </label>
+                            <label class="form-grid__full">
+                                <span>Subtitle <small>(shown on the landing card)</small></span>
+                                <input id="cat-subtitle" type="text" placeholder="Free vs Pro, How to cancel, Refunds">
+                            </label>
+                            <label>
+                                <span>Icon</span>
+                                <select id="cat-icon"></select>
+                            </label>
+                            <div class="form-grid__icon-preview">
+                                <span>Preview</span>
+                                <div id="cat-icon-preview" class="icon-preview"></div>
+                            </div>
+                        </div>
+                        <div class="pane__actions">
+                            <button id="delete-category-btn" class="btn btn--danger" type="button">Delete category</button>
+                        </div>
+                    </div>
+
+                    <div class="pane__section">
+                        <div class="pane__section-header">
+                            <h3 class="pane__title">Questions</h3>
+                            <button id="add-question-btn" class="btn btn--small" type="button">+ Add question</button>
+                        </div>
+                        <ul id="question-list" class="q-list"></ul>
+                    </div>
+                </section>
+
+                <section id="question-pane" class="pane" hidden>
+                    <button id="back-to-category" class="btn btn--ghost btn--small back-btn" type="button">← Back to category</button>
+                    <div class="pane__section">
+                        <h3 class="pane__title">Question</h3>
+                        <div class="form-grid">
+                            <label class="form-grid__full">
+                                <span>Title</span>
+                                <input id="q-title" type="text" placeholder="e.g. Difference in Free and Pro">
+                            </label>
+                            <label class="form-grid__full">
+                                <span>Slug <small>(URL part, lowercase, hyphens)</small></span>
+                                <input id="q-slug" type="text" placeholder="e.g. difference-in-free-and-pro">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="pane__section">
+                        <h3 class="pane__title">Answer</h3>
+                        <div id="quill-editor" class="quill-editor"></div>
+                    </div>
+                    <div class="pane__actions">
+                        <button id="delete-question-btn" class="btn btn--danger" type="button">Delete question</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/editor.js"></script>
+</body>
+
+</html>

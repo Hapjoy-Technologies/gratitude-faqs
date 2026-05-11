@@ -1,16 +1,4 @@
-// SEED FILE - Not the live source of truth anymore.
-//
-// Live content now lives in S3 and is edited via editor.html (see lambdas/README.md).
-// This file is kept as:
-//   1. The seed used by scripts/export-seed.mjs to generate data/faqs.json for
-//      the initial S3 upload.
-//   2. A local-dev fallback so the public site keeps working if the Lambda URL
-//      in js/config.js is not yet configured.
-//
-// To update the live FAQ content, use the editor at editor.html. Do NOT edit
-// this file expecting changes to appear on the public site.
-
-window.FAQ_DATA = {
+{
   "categories": [
     {
       "slug": "gratitude-pro",
@@ -286,4 +274,4 @@ window.FAQ_DATA = {
       ]
     }
   ]
-};
+}

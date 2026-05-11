@@ -17,12 +17,57 @@
     let data = null;
     let categoryBySlug = new Map();
 
-    function load() {
+    const CACHE_KEY = 'faq-content-cache-v1';
+
+    function readCache() {
+        const ttl = window.FAQ_CONFIG?.cacheTtlMs ?? 0;
+        if (!ttl) return null;
         try {
-            if (!window.FAQ_DATA || !Array.isArray(window.FAQ_DATA.categories)) {
-                throw new Error('FAQ_DATA missing or malformed — check data/faqs.js loaded before js/faqs.js');
+            const raw = localStorage.getItem(CACHE_KEY);
+            if (!raw) return null;
+            const parsed = JSON.parse(raw);
+            if (!parsed || typeof parsed.savedAt !== 'number') return null;
+            if (Date.now() - parsed.savedAt > ttl) return null;
+            return parsed.content;
+        } catch {
+            return null;
+        }
+    }
+
+    function writeCache(content) {
+        try {
+            localStorage.setItem(CACHE_KEY, JSON.stringify({ savedAt: Date.now(), content }));
+        } catch {
+            // localStorage may be unavailable (private mode, full quota) — non-fatal.
+        }
+    }
+
+    async function fetchContent() {
+        const cached = readCache();
+        if (cached) return cached;
+
+        const url = window.FAQ_CONFIG?.getFaqsUrl;
+        if (!url || url.includes('REPLACE-WITH')) {
+            // Fallback: if config hasn't been pointed at a Lambda yet, use the
+            // bundled seed data so the site still works for local dev.
+            if (window.FAQ_DATA?.categories) return window.FAQ_DATA;
+            throw new Error('FAQ_CONFIG.getFaqsUrl not configured');
+        }
+
+        const res = await fetch(url, { cache: 'no-cache' });
+        if (!res.ok) throw new Error(`Fetch failed (${res.status})`);
+        const content = await res.json();
+        writeCache(content);
+        return content;
+    }
+
+    async function load() {
+        try {
+            const content = await fetchContent();
+            if (!content || !Array.isArray(content.categories)) {
+                throw new Error('Fetched FAQ data is malformed');
             }
-            data = window.FAQ_DATA;
+            data = content;
             categoryBySlug = new Map(data.categories.map((c) => [c.slug, c]));
             $('view-loading').hidden = true;
             route();
