@@ -98,7 +98,7 @@ window.FAQ_DATA = {
         {
           "slug": "use-both-icloud-and-google-drive",
           "title": "Use both iCloud and Google Drive?",
-          "answer": "<p>Yes &mdash; on iOS, you can enable both iCloud Sync and Google Drive Backup at the same time:</p><ol><li>Go to Settings &rarr; Backup</li><li>Turn on <strong>iCloud Sync</strong> to keep your entries synced across all your Apple devices using your Apple ID</li><li>Turn on <strong>Google Drive Backup</strong> for a portable backup that also works if you ever switch to Android</li></ol><p>Running both gives you the most flexibility. On Android, only Google Drive Backup is available.</p>"
+          "answer": "<p>Yes - on iOS, you can enable both iCloud Sync and Google Drive Backup at the same time:</p><ol><li>Go to Settings &rarr; Backup</li><li>Turn on <strong>iCloud Sync</strong> to keep your entries synced across all your Apple devices using your Apple ID</li><li>Turn on <strong>Google Drive Backup</strong> for a portable backup that also works if you ever switch to Android</li></ol><p>Running both gives you the most flexibility. On Android, only Google Drive Backup is available.</p>"
         },
         {
           "slug": "sync-between-android-and-ios",
@@ -108,7 +108,7 @@ window.FAQ_DATA = {
         {
           "slug": "data-privacy",
           "title": "Data Privacy",
-          "answer": "<p>Your privacy is at the heart of how Gratitude is built:</p><ul><li>Your journal entries, affirmations, vision boards, and bookmarks are stored <strong>locally on your device</strong> by default.</li><li>We do not have access to your entries &mdash; they belong only to you.</li><li>If you enable backup, your data is saved to <strong>your private Google Drive folder</strong> or <strong>your private iCloud space</strong>. Only you can access it &mdash; not us or any third party.</li><li>We never sell or share your data.</li></ul><p>For full details, please read our <a href=\"https://www.gratefulness.me/privacy-policy.html\" target=\"_blank\" rel=\"noopener\">Privacy Policy</a>.</p>"
+          "answer": "<p>Your privacy is at the heart of how Gratitude is built:</p><ul><li>Your journal entries, affirmations, vision boards, and bookmarks are stored <strong>locally on your device</strong> by default.</li><li>We do not have access to your entries - they belong only to you.</li><li>If you enable backup, your data is saved to <strong>your private Google Drive folder</strong> or <strong>your private iCloud space</strong>. Only you can access it - not us or any third party.</li><li>We never sell or share your data.</li></ul><p>For full details, please read our <a href=\"https://www.gratefulness.me/privacy-policy.html\" target=\"_blank\" rel=\"noopener\">Privacy Policy</a>.</p>"
         },
         {
           "slug": "delete-data",
@@ -126,12 +126,12 @@ window.FAQ_DATA = {
         {
           "slug": "how-many-journal-entries",
           "title": "How many journal entries",
-          "answer": "<p>You can write unlimited journal entries on both the free and Pro versions of Gratitude. Write as often as you'd like &mdash; daily, weekly, or whenever the moment feels right.</p>"
+          "answer": "<p>You can write unlimited journal entries on both the free and Pro versions of Gratitude. Write as often as you'd like - daily, weekly, or whenever the moment feels right.</p>"
         },
         {
           "slug": "searching-entries",
           "title": "Searching entries",
-          "answer": "<p>To search through your past entries:</p><ol><li>Open the Journal tab</li><li>Scroll down slightly to reveal the search bar</li><li>Type a word, phrase, or feeling &mdash; the app will surface every entry that contains it</li></ol>"
+          "answer": "<p>To search through your past entries:</p><ol><li>Open the Journal tab</li><li>Scroll down slightly to reveal the search bar</li><li>Type a word, phrase, or feeling - the app will surface every entry that contains it</li></ol><p><strong>Note:</strong> Search works on entry text only. You cannot search by attached photos.</p>"
         },
         {
           "slug": "print-journal",
@@ -141,7 +141,7 @@ window.FAQ_DATA = {
         {
           "slug": "writing-for-past-dates",
           "title": "Writing for past dates",
-          "answer": "<p>You can write entries for past dates to fill in days you missed &mdash; and it will restore your streak too!</p><p>Writing up to <strong>2 days in the past</strong> is available on the free version. Writing further back requires Pro.</p><ol><li>Start a new entry in the Journal tab</li><li>Tap on the date shown at the top of the entry</li><li>Select the desired date</li><li>Write your entry and save &mdash; it will appear on that day's slot in your journal</li></ol>"
+          "answer": "<p>You can write entries for past dates to fill in days you missed - and it will restore your streak too!</p><p>Writing up to <strong>2 days in the past</strong> is available on the free version. Writing further back requires Pro.</p><ol><li>Start a new entry in the Journal tab</li><li>Tap on the date shown at the top of the entry</li><li>Select the desired date</li><li>Write your entry and save - it will appear on that day's slot in your journal</li></ol>"
         },
         {
           "slug": "adding-custom-prompt",
@@ -174,7 +174,7 @@ window.FAQ_DATA = {
         {
           "slug": "adding-affirmation",
           "title": "Adding affirmation",
-          "answer": "<p>To add a new affirmation:</p><ol><li>Open the Affirmations tab</li><li>Tap the <strong>New Affirmations</strong> button</li><li>Type your affirmation. Optionally add a background image and record your voice</li><li>Choose the folder you want to add it to</li><li>Save &mdash; your affirmation will appear in that folder</li></ol>"
+          "answer": "<p>To add a new affirmation:</p><ol><li>Open the Affirmations tab</li><li>Tap the <strong>New Affirmations</strong> button</li><li>Type your affirmation. Optionally add a background image and record your voice</li><li>Choose the folder you want to add it to</li><li>Save - your affirmation will appear in that folder</li></ol>"
         },
         {
           "slug": "editing-affirmation",
@@ -184,7 +184,7 @@ window.FAQ_DATA = {
         {
           "slug": "add-your-voice",
           "title": "Add your voice",
-          "answer": "<p>You can record affirmations in your own voice &mdash; listening to yourself say them is especially powerful:</p><ol><li>Open the affirmation</li><li>Tap the <strong>Add Voice</strong> button</li><li>Tap <strong>Start Recording</strong> and grant microphone permissions if prompted</li><li>Record your voice (up to 15 seconds)</li><li>Tap <strong>Stop Recording</strong> when you're done</li><li>Tap <strong>Save Recording</strong> to confirm</li></ol><p>Your voice will play automatically the next time you listen to that affirmation.</p>"
+          "answer": "<p>You can record affirmations in your own voice - listening to yourself say them is especially powerful:</p><ol><li>Open the affirmation</li><li>Tap the <strong>Add Voice</strong> button</li><li>Tap <strong>Start Recording</strong> and grant microphone permissions if prompted</li><li>Record your voice (up to 15 seconds)</li><li>Tap <strong>Stop Recording</strong> when you're done</li><li>Tap <strong>Save Recording</strong> to confirm</li></ol><p>Your voice will play automatically the next time you listen to that affirmation.</p>"
         },
         {
           "slug": "deleting-affirmation",
@@ -265,7 +265,7 @@ window.FAQ_DATA = {
         {
           "slug": "previous-days-daily-zen",
           "title": "Previous day's Daily Zen",
-          "answer": "<p><strong>On Android:</strong> You can view up to 3 days of past Daily Zen quotes by scrolling down on the Daily Zen tab.</p><p><strong>On iOS:</strong> You can only view the Daily Zen quote for the current day.</p><p>If you'd like to keep a quote, tap the bookmark icon &mdash; bookmarked quotes appear under Bookmarks in your profile and become your personal collection of positivity.</p>"
+          "answer": "<p><strong>On Android:</strong> You can view up to 3 days of past Daily Zen quotes by scrolling down on the Daily Zen tab.</p><p><strong>On iOS:</strong> You can only view the Daily Zen quote for the current day.</p><p>If you'd like to keep a quote, tap the bookmark icon - bookmarked quotes appear under Bookmarks in the Daily Zen tab and become your personal collection of positivity.</p>"
         },
         {
           "slug": "change-quote-time",
